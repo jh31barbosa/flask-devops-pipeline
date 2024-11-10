@@ -54,23 +54,23 @@ This project is a full-stack DevOps application involving a simple CRUD app buil
    git clone https://github.com/yourusername/your-repo.git
    cd your-repo
 
-2.Build and Run the Docker Container:
+2. **Build and Run the Docker Container**:
 docker build -t flask-crud-app .
 docker run -p 5000:5000 flask-crud-app
 
-3.Run with Docker Compose (Optional):
+3.**Run with Docker Compose (Optional)**:
 docker-compose up --build
 
-Infrastructure Deployment
- 1.Navigate to the terraform directory:
-   cd terraform
- 2.Initialize Terraform:
-   terraform init
- 3.Apply the Terraform Configuration:
-   terraform apply
+**Infrastructure Deployment**
+ 1.**Navigate to the terraform directory**:
+   -**cd terraform**
+ 2.**Initialize Terraform**:
+   -**terraform init**
+ 3.**Apply the Terraform Configuration**:
+   -**terraform apply**
 
-CI/CD Workflow
-GitHub Actions will automatically:
+**CI/CD Workflow**
+**GitHub Actions will automatically**:
   Run unit tests on code push.
   Build and push Docker images.
   Deploy the updated app to the EC2 instance upon pipeline approval.
