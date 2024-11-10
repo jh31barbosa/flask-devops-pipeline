@@ -1,0 +1,45 @@
+# Ambiente Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos de ambiente
+.env
+
+# Logs
+*.log
+
+# Configurações do Docker
+*.env.docker
+
+# Configurações de IDEs
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Configurações de Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+crash.log
+override.tf
+override.tf.json
+*.terraform.lock.hcl
+
+# Pastas e arquivos de build
+build/
+dist/
+
+# Configurações de CI/CD com credenciais (caso existam)
+.github/secrets.yml
+
+# Arquivos sensíveis (exemplo de chave)
+*.pem
+*.key
+
+# Outros arquivos temporários
+*.tmp
+*.swp
