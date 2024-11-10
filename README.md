@@ -55,40 +55,47 @@ This project is a full-stack DevOps application involving a simple CRUD app buil
    cd your-repo
 
 2. **Build and Run the Docker Container**:
-docker build -t flask-crud-app .
-docker run -p 5000:5000 flask-crud-app
-
+  ```bash
+  docker build -t flask-crud-app .
+  docker run -p 5000:5000 flask-crud-app
+ ```
 3.**Run with Docker Compose (Optional)**:
+```bash
 docker-compose up --build
+```
+### Infrastructure Deployment
+1.**Navigate to the terraform directory**:
+   ```bash
+   cd terraform
+  ```
+2.**Initialize Terraform**:
+  ```bash
+  terraform init
+  ```
+3.**Apply the Terraform Configuration**:
+  ```bash
+  terraform apply
+  ```
+## CI/CD Workflow
+### GitHub Actions will automatically:
+- **Run unit tests on code push**.
+- **Build and push Docker images**.
+- **Deploy the updated app to the EC2 instance upon pipeline approval**.
 
-**Infrastructure Deployment**
- 1.**Navigate to the terraform directory**:
-   -**cd terraform**
- 2.**Initialize Terraform**:
-   -**terraform init**
- 3.**Apply the Terraform Configuration**:
-   -**terraform apply**
-
-**CI/CD Workflow**
-**GitHub Actions will automatically**:
-  Run unit tests on code push.
-  Build and push Docker images.
-  Deploy the updated app to the EC2 instance upon pipeline approval.
-
-Monitoring Setup
-1.Expose a Prometheus Metrics Endpoint in the Flask app:
+### Monitoring Setup
+1. **Expose a Prometheus Metrics Endpoint in the Flask app**:
     
     @app.route('/metrics')
     def metrics():
         # Example code for Prometheus metrics exposure
 
- 2.Configure Prometheus to scrape metrics from the Flask app.
- 3.Set up Grafana for dashboard visualization.
+ 2. **Configure Prometheus to scrape metrics from the Flask app**.
+ 3. **Set up Grafana for dashboard visualization**.
 
-License
+### License
 This project is licensed under the MIT License.
 
-Contact
+### Contact
 For further information or questions, please contact Jose Henrique.
 
 
