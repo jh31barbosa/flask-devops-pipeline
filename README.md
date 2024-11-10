@@ -76,7 +76,7 @@ GitHub Actions will automatically:
   Deploy the updated app to the EC2 instance upon pipeline approval.
 
 Monitoring Setup
- 1.Expose a Prometheus Metrics Endpoint in the Flask app:
+1.Expose a Prometheus Metrics Endpoint in the Flask app:
     
     @app.route('/metrics')
     def metrics():
