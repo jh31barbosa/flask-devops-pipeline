@@ -8,6 +8,9 @@ This project is a full-stack DevOps application involving a simple CRUD app buil
 - **Language**: Python
 - **Framework**: Flask
 - **Functionality**: Basic CRUD operations to manage simple items (e.g., a task list).
+- **How it works**:
+  ![This is a photo of the app running local](./media/local-flask-app.png)
+
 
 ### 2. Containerization
 - **Docker**:
