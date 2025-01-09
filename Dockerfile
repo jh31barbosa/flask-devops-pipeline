@@ -1,17 +1,21 @@
-# Use uma imagem base do Python
+# Use a imagem oficial do Python
 FROM python:3.9-slim
 
-# Define o diretório de trabalho
+# Defina o diretório de trabalho dentro do container
 WORKDIR /app
 
-# Copia os arquivos da aplicação
-COPY . .
+# Copie os arquivos da pasta web-interface para dentro do container
+COPY web-interface/ /app/
 
-# Instala as dependências
+# Copie o requirements.txt para o diretório de trabalho
+COPY web-interface/requirements.txt /app/
+
+# Instale as dependências
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Exposição da porta da aplicação
+# Exponha a porta 5000 para a aplicação Flask e a porta 9090 para o Prometheus
 EXPOSE 5000
+EXPOSE 9090
 
-# Comando para iniciar a aplicação
+# Defina o comando para iniciar a aplicação Flask
 CMD ["python", "app.py"]

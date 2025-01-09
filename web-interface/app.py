@@ -1,15 +1,14 @@
 from flask import Flask, request, jsonify, render_template, redirect, url_for
-from prometheus_client import start_http_server, Summary, Counter
+from prometheus_client import Summary, Counter
+from prometheus_flask_exporter import PrometheusMetrics
 
 app = Flask(__name__)
 tasks = []
 
 # Prometheus metrics
+metrics = PrometheusMetrics(app)
 REQUEST_TIME = Summary('request_processing_seconds', 'Time spent processing request')
 REQUEST_COUNT = Counter('app_request_total', 'Total number of requests')
-
-# Start Prometheus server to expose metrics
-start_http_server(9090)  # Prometheus server running on port 9090
 
 # Home route to render the template
 @app.route('/', methods=['GET'])
