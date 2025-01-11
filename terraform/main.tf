@@ -7,25 +7,13 @@ resource "aws_instance" "app_instance" {
   instance_type = "t2.micro"
 
   user_data = <<-EOF
-                #!/bin/bash
-                sudo yum update -y
-                sudo amazon-linux-extras enable docker
-                sudo amazon-linux-extras install docker -y
-                sudo service docker start
-                sudo usermod -a -G docker ec2-user
-
-                # Instalar Docker Compose
-                sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-                sudo chmod +x /usr/local/bin/docker-compose
-
-                # Instalar Git e clonar o repositório
-                sudo yum install git -y
-                git clone https://github.com/seu-usuario/seu-repositorio.git /home/ec2-user/app
-
-                # Subir aplicação com Docker Compose
-                cd /home/ec2-user/app
-                docker-compose up -d
-                EOF
+              #!/bin/bash
+              sudo yum update -y
+              sudo amazon-linux-extras install docker -y
+              sudo service docker start
+              sudo usermod -aG docker ec2-user
+              docker run -d --name app-container -p 5000:5000 <dockerhub-username>/<image-name>:<tag>
+              EOF
 
   tags = {
     Name = "devops-crud-instance"
