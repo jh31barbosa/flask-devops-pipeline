@@ -12,13 +12,17 @@ resource "aws_instance" "app_instance" {
               sudo amazon-linux-extras install docker -y
               sudo service docker start
               sudo usermod -aG docker ec2-user
+              
               # Clonando o repositório do GitHub contendo o docker-compose.yml
               cd /home/ec2-user
+              echo "export GITHUB_TOKEN=${var.github_token}" >> /etc/environment
               git clone https://github.com/jh31barbosa/simple-crud-devops.git
               cd repositorio-do-seu-projeto
+              
               # Garantir que o Docker Compose está instalado
               sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
               sudo chmod +x /usr/local/bin/docker-compose
+              
               # Subir os containers com Docker Compose
               docker-compose down
               docker-compose pull
@@ -30,6 +34,4 @@ resource "aws_instance" "app_instance" {
   }
 }
 
-output "instance_public_ip" {
-  value = aws_instance.app_instance.public_ip
-}
+
