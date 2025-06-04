@@ -62,8 +62,9 @@ A full-stack CRUD application built with Python Flask, featuring complete CI/CD 
    cd simple-crud-devops
 
 2. **Run with Docker Compose**
-bashdocker-compose up -d
-
+```bash
+   docker-compose up -d
+```
 3. **Access the application**
 
 App: http://localhost:5000
@@ -71,46 +72,48 @@ Grafana: http://localhost:3000
 
 
 
-## Production Deployment**
+## Production Deployment
 
 1. **Configure AWS credentials**
-   bash
+   ```bash
    aws configure
-
+   ```
 2. **Deploy infrastructure**
-   bash
+   ```bash
    cd terraform/
    terraform init
    terraform plan
    terraform apply
-
+   ```
 3. **Deploy application** (automatically via GitHub Actions)
 
-   .Push to main branch triggers deployment
+ - Push to main branch triggers deployment
 
 
 
 ## 📊 Monitoring
 
 The application includes comprehensive monitoring:
-
-**.Application Metrics:** Request count, response time, error rates
-**.System Metrics:** CPU, memory, disk usage
-**.Custom Dashboards:** Pre-configured Grafana dashboards
+ - Application Metrics: Request count, response time, error rates
+ - System Metrics: CPU, memory, disk usage
+ - Custom Dashboards: Pre-configured Grafana dashboards
 
 ## 🧪 Testing
+   ```
+   bash
+     # Run unit tests
+     python -m pytest tests/
 
-bash
-Run unit tests
-python -m pytest tests/
-Run integration tests
-python -m pytest tests/integration/
-Check test coverage
-coverage run -m pytest
-coverage report
+     # Run integration tests
+     python -m pytest tests/integration/
+
+     # Check test coverage
+     coverage run -m pytest
+     coverage report
+   ```
 
 ## 📁 Project Structure
-
+```
 flask-devops-pipeline/
 ├── app/
 │   ├── __init__.py
@@ -131,27 +134,28 @@ flask-devops-pipeline/
 ├── docker-compose.yml
 ├── requirements.txt
 └── README.md
-
+```
 ## 🌟 Key Achievements
 
-.⚡ 40% faster deployment through automation
-.🔍 99.9% uptime with monitoring alerts
-.🚀 Zero-downtime deployments via rolling updates
-.📊 Real-time metrics and alerting
+- ⚡ 40% faster deployment through automation
+- 🔍 99.9% uptime with monitoring alerts
+- 🚀 Zero-downtime deployments via rolling updates
+- 📊 Real-time metrics and alerting
 
 ## 🤝 Contributing
 
-1.Fork the repository
-2.Create a feature branch (git checkout -b feature/amazing-feature)
-3.Commit your changes (git commit -m 'Add amazing feature')
-4.Push to the branch (git push origin feature/amazing-feature)
-5.Open a Pull Request
+- Fork the repository
+- Create a feature branch (git checkout -b feature/amazing-feature)
+- Commit your changes (git commit -m 'Add amazing feature')
+- Push to the branch (git push origin feature/amazing-feature)
+- Open a Pull Request
 
-📝 License
+## 📝 License
 This project is licensed under the MIT License - see the LICENSE file for details.
-👨‍💻 Author
+
+## 👨‍💻 Author
 José Henrique Mendonça
 
-LinkedIn: jh29-dev
-Email: jh29.dev@gmail.com
-Portfolio: [Your Portfolio Link]
+ - LinkedIn: jh29-dev
+ - Email: jh29.dev@gmail.com
+ - Portfolio: 
