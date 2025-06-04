@@ -91,6 +91,7 @@ Grafana: http://localhost:3000
 
 
 📊 Monitoring
+
 The application includes comprehensive monitoring:
 
 **.Application Metrics:** Request count, response time, error rates
