@@ -99,14 +99,15 @@ The application includes comprehensive monitoring:
 **.Custom Dashboards:** Pre-configured Grafana dashboards
 
 🧪 Testing
+
 bash
-# Run unit tests
+Run unit tests
 python -m pytest tests/
 
-# Run integration tests
+Run integration tests
 python -m pytest tests/integration/
 
-# Check test coverage
+Check test coverage
 coverage run -m pytest
 coverage report
 
@@ -132,20 +133,21 @@ flask-devops-pipeline/
 ├── docker-compose.yml
 ├── requirements.txt
 └── README.md
+
 🌟 Key Achievements
 
-⚡ 40% faster deployment through automation
-🔍 99.9% uptime with monitoring alerts
-🚀 Zero-downtime deployments via rolling updates
-📊 Real-time metrics and alerting
+.⚡ 40% faster deployment through automation
+.🔍 99.9% uptime with monitoring alerts
+.🚀 Zero-downtime deployments via rolling updates
+.📊 Real-time metrics and alerting
 
 🤝 Contributing
 
-Fork the repository
-Create a feature branch (git checkout -b feature/amazing-feature)
-Commit your changes (git commit -m 'Add amazing feature')
-Push to the branch (git push origin feature/amazing-feature)
-Open a Pull Request
+1.Fork the repository
+2.Create a feature branch (git checkout -b feature/amazing-feature)
+3.Commit your changes (git commit -m 'Add amazing feature')
+4.Push to the branch (git push origin feature/amazing-feature)
+5.Open a Pull Request
 
 📝 License
 This project is licensed under the MIT License - see the LICENSE file for details.
