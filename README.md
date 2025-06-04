@@ -71,7 +71,7 @@ Grafana: http://localhost:3000
 
 
 
-**Production Deployment**
+## Production Deployment**
 
 1. **Configure AWS credentials**
    bash
@@ -90,7 +90,7 @@ Grafana: http://localhost:3000
 
 
 
-📊 Monitoring
+## 📊 Monitoring
 
 The application includes comprehensive monitoring:
 
@@ -98,20 +98,18 @@ The application includes comprehensive monitoring:
 **.System Metrics:** CPU, memory, disk usage
 **.Custom Dashboards:** Pre-configured Grafana dashboards
 
-🧪 Testing
+## 🧪 Testing
 
 bash
 Run unit tests
 python -m pytest tests/
-
 Run integration tests
 python -m pytest tests/integration/
-
 Check test coverage
 coverage run -m pytest
 coverage report
 
-📁 Project Structure
+## 📁 Project Structure
 
 flask-devops-pipeline/
 ├── app/
@@ -134,14 +132,14 @@ flask-devops-pipeline/
 ├── requirements.txt
 └── README.md
 
-🌟 Key Achievements
+## 🌟 Key Achievements
 
 .⚡ 40% faster deployment through automation
 .🔍 99.9% uptime with monitoring alerts
 .🚀 Zero-downtime deployments via rolling updates
 .📊 Real-time metrics and alerting
 
-🤝 Contributing
+## 🤝 Contributing
 
 1.Fork the repository
 2.Create a feature branch (git checkout -b feature/amazing-feature)
