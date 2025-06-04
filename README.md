@@ -61,42 +61,45 @@ A full-stack CRUD application built with Python Flask, featuring complete CI/CD 
    git clone https://github.com/jh31barbosa/simple-crud-devops.git
    cd simple-crud-devops
 
-Run with Docker Compose
+2. **Run with Docker Compose**
 bashdocker-compose up -d
 
-Access the application
+3. **Access the application**
 
 App: http://localhost:5000
 Grafana: http://localhost:3000
 
 
 
-Production Deployment
+**Production Deployment**
 
-Configure AWS credentials
-bashaws configure
+1. **Configure AWS credentials**
+   bash
+   aws configure
 
-Deploy infrastructure
-bashcd terraform/
-terraform init
-terraform plan
-terraform apply
+2. **Deploy infrastructure**
+   bash
+   cd terraform/
+   terraform init
+   terraform plan
+   terraform apply
 
-Deploy application (automatically via GitHub Actions)
+3. **Deploy application** (automatically via GitHub Actions)
 
-Push to main branch triggers deployment
+   .Push to main branch triggers deployment
 
 
 
 📊 Monitoring
 The application includes comprehensive monitoring:
 
-Application Metrics: Request count, response time, error rates
-System Metrics: CPU, memory, disk usage
-Custom Dashboards: Pre-configured Grafana dashboards
+**.Application Metrics:** Request count, response time, error rates
+**.System Metrics:** CPU, memory, disk usage
+**.Custom Dashboards:** Pre-configured Grafana dashboards
 
 🧪 Testing
-bash# Run unit tests
+bash
+# Run unit tests
 python -m pytest tests/
 
 # Run integration tests
@@ -105,8 +108,10 @@ python -m pytest tests/integration/
 # Check test coverage
 coverage run -m pytest
 coverage report
+
 📁 Project Structure
-simple-crud-devops/
+
+flask-devops-pipeline/
 ├── app/
 │   ├── __init__.py
 │   ├── models.py
